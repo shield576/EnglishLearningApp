@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">English Learning App</string>
+    <string name="action_settings">Settings</string>
+    <string name="first_fragment_label">英単語リスト</string>
+    <string name="word_list_title">英単語カード</string>
+    <string name="word_list_description">英単語と意味を入力してカードを追加しましょう。</string>
+    <string name="english_word_hint">English word</string>
+    <string name="japanese_meaning_hint">日本語の意味</string>
+    <string name="add_word">カードを追加</string>
+    <string name="empty_word_list">まだカードがありません。単語を入力して追加してください。</string>
+    <string name="required_field">必須項目です</string>
+    <string name="delete_card">カードを削除</string>
+    <string name="hide_english">英単語を隠す</string>
+    <string name="show_english">英単語を表示</string>
+    <string name="hide_japanese">日本語を隠す</string>
+    <string name="show_japanese">日本語を表示</string>
+    <string name="tap_to_show">Tap to show</string>
+</resources>
