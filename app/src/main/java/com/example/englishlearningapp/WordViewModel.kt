@@ -27,7 +27,13 @@ class WordViewModel(private val wordDao: WordDao) : ViewModel() {
         viewModelScope.launch {
             val existing = wordDao.getWordByEnglish(englishWord)
             if (existing != null) {
-                _errorMessage.value = "「$englishWord」はすでに登録されています"
+                if (!existing.isVisible) {
+                    // 非表示の単語を再表示し、日本語訳も更新する
+                    wordDao.update(existing.copy(isVisible = true, japaneseMeaning = japaneseMeaning))
+                    _insertSuccess.emit(Unit)
+                } else {
+                    _errorMessage.value = "「$englishWord」はすでに登録されています"
+                }
                 return@launch
             }
             wordDao.insert(
